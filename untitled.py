@@ -5,6 +5,7 @@ from datetime import datetime
 
 
 class UiDialog(object):
+    # Используется для создания метода, который ничего не знает о классе или экземпляре, через который он был вызван.
     @staticmethod
     def setupui(dialog):
         # Работа с окном
@@ -13,6 +14,7 @@ class UiDialog(object):
         dialog.setPalette(palette)
         dialog.setWindowTitle("Syn")
 
+         # Иннициализация обьектов выводимых на экран
     def __init__(self, dialog):
         # ----------------Надписи-----------------#
 
@@ -553,6 +555,8 @@ class UiDialog(object):
         self.role_in = ""
         self.login_admin = ""
 
+        # Функции вывода товаров в витрине
+        
     def item_clicked_1(self):
         if self.item_1.text() == "Пусто":
             return
@@ -921,6 +925,7 @@ class UiDialog(object):
             if self.check_role == 0:
                 self.entrance_user_button()
 
+         # Удаление товара
     def delete_item(self):
         con = sqlite3.connect('auto/users.db')
         cur = con.cursor()
@@ -986,7 +991,8 @@ class UiDialog(object):
         if self.check_role == 0:
             self.entrance_user_button()
         self.back_slide = "button_delete_item_clicked"
-
+    
+    # Покупка товара
     def buy_item(self):
         name = self.text_things.text()
         price = self.text_login_login.text()
@@ -1090,7 +1096,7 @@ class UiDialog(object):
                     self.item_8.setText(f'{name}')
                 else:
                     return
-
+    # Функция смены роли у пользователя
     def admin_users_change_role_clicked(self):
         con = sqlite3.connect('auto/users.db')
         cur = con.cursor()
@@ -1143,7 +1149,7 @@ class UiDialog(object):
 
                 cur.close()
                 con.close()
-
+   # Функция смены доступа у пользователя
     def admin_users_change_clicked(self):
         self.closed()
         self.button_back.show()
@@ -1172,6 +1178,7 @@ class UiDialog(object):
 
         self.back_slide = "admin_users_change_clicked"
 
+           # Добавление пользователя
     def admin_users_add_clicked_button(self):
         con = sqlite3.connect('auto/users.db')
         cur = con.cursor()
@@ -1274,6 +1281,7 @@ class UiDialog(object):
 
         self.back_slide = "admin_users_clicked"
 
+    # Добавление баллов
     def add_points_clicked(self):
         login = self.login.text()
         kol = self.spinBox_points.value()
@@ -1330,6 +1338,7 @@ class UiDialog(object):
 
                 self.admin_menu()
 
+    # снятие баллов
     def delete_points_clicked(self):
         login = self.login.text()
         kol = self.spinBox_points.value()
@@ -1503,7 +1512,8 @@ class UiDialog(object):
             self.entrance_main_button()
         if self.back_slide == "button_delete_item_clicked":
             self.items_clicked()
-
+    
+    # Основаня функция закрытие окон и объектов
     def closed(self):
         # Закрытие всех элементов
         self.clear()
@@ -1656,7 +1666,7 @@ class UiDialog(object):
             self.entrance_admin()
         if self.check_role == 0:
             self.entrance_user()
-
+     #  Вывод витрины товаров на экран
     def entrance_item(self):
         con = sqlite3.connect('auto/users.db')
         cur = con.cursor()
@@ -1814,13 +1824,13 @@ class UiDialog(object):
         about_us = value[0][5]
 
         self.textEdit_about_us.setText(str(about_us))
-
+    # Получение логина для вывода
     def login_get(self):
         login = self.login_in
         role = self.role_in
         self.text_login_login.setText(str(login))
         self.text_role_admin.setText(str(role))
-
+    # Получчение очков для вывода
     def point_get(self):
         con = sqlite3.connect('auto/users.db')
         cur = con.cursor()
@@ -1834,6 +1844,7 @@ class UiDialog(object):
 
         self.text_points.setText(str(point))
 
+    # Назначение роли в программе
     def entrance_check(self, login):
         con = sqlite3.connect('auto/users.db')
         cur = con.cursor()
@@ -1854,6 +1865,7 @@ class UiDialog(object):
         if value != [] and value[0][6] == 0:
             self.entrance_user()
 
+    # Функция авторизации аккаунта, проверки его на доступ, правильность ввода данных
     def login_def(self, login, passw):
         con = sqlite3.connect('auto/users.db')
         cur = con.cursor()

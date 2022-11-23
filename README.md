@@ -28,7 +28,7 @@
 В следствии отсутсвтия знаний и навыков в области тестирования ПО созданного с помощью модуля PyQt, автоматизированные тесты отсутствуют. Было проведено только ручное тестирование и его результаты оформлены в виде тест кейсов рассположеных в Документация/Техническая документация/ в разделе 6. Протокол приема сдаточных испытаний.
 
 ## Структура базы данных
-![alt text](https://github.com/ingname/ingname/blob/main/diagram_bd1.drawio.png?raw=true)
+![alt text](https://github.com/ingname/ingname/blob/main/photo/diagram_bd.png?raw=true)
 
 ## Документация
 Расположена в соответствующей папке, в которой находится следующая документация:
@@ -43,6 +43,6 @@
 
 ## Внешний вид приложения
 ### Авторизация
-![alt text](https://github.com/ingname/ingname/blob/main/image.translated.jpg?raw=true)
+![alt text](https://github.com/ingname/ingname/blob/main/photo/index.png?raw=true)
 ### Главная
-![alt text](https://github.com/ingname/ingname/blob/main/image.translated1.jpg?raw=true)
+![alt text](https://github.com/ingname/ingname/blob/main/photo/index2.png?raw=true)

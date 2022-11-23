@@ -9,7 +9,7 @@ class Untitled(QtWidgets.QMainWindow):
         super().__init__()
         self.ui = UiDialog(self)
         self.ui.setupui(self)
-
+        # Присоеденение функций к кнопкам
         self.ui.beginning()
         self.ui.button_back.clicked.connect(self.ui.back)
         self.ui.button_entrance.clicked.connect(self.wrapper)
@@ -40,7 +40,8 @@ class Untitled(QtWidgets.QMainWindow):
         self.ui.item_6.clicked.connect(self.ui.item_clicked_6)
         self.ui.item_7.clicked.connect(self.ui.item_clicked_7)
         self.ui.item_8.clicked.connect(self.ui.item_clicked_8)
-
+    
+    # Функция проверки строк
     def wrapper(self):
         if len(self.ui.login.text()) == 0 and len(self.ui.password.text()) == 0:
             self.ui.text_error_log.show()
@@ -48,7 +49,7 @@ class Untitled(QtWidgets.QMainWindow):
         else:
             self.ui.text_error_log.close()
             self.auth()
-
+    
     def auth(self):
         name = self.ui.login.text()
         passw = self.ui.password.text()

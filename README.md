@@ -29,7 +29,7 @@
 
 ## Структура базы данных
 Реляционная модель базы данных представлена ниже
-![alt text](https://github.com/ingname/ingname/blob/main/Документация/Диаграммы/diagram_bd.png?raw=true)
+![alt text](https://github.com/ingname/ingname/blob/main/diagram_bd1.png?raw=true)
 
 ## Документация
 Расположена в соответствующей папке, в которой находится следующая документация:

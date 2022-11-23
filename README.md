@@ -26,4 +26,4 @@
 
 ## Внешний вид приложения
 ![alt text](https://github.com/ingname/ingname/blob/main/image.translated.jpg?raw=true)
-![alt text](https://github.com/ingname/ingname/blob/main/image.translated (1).jpg?raw=true)
+![alt text](https://github.com/ingname/ingname/blob/main/image.translated1.jpg?raw=true)
